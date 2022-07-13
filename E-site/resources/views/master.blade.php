@@ -28,8 +28,29 @@
  }
 
  .custom-login{
-  height: 500px;
+  height: 620px;
   padding-top: 100px  
  }
+
+ .slider-img{
+    height: 400px !important;
+ }
+
+ .bd-placeholder-img {
+        height: 400px !important;
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      .custom-slider{
+    height: 600px;
+    margin-top: 20px;
+ }     
+
+0
+ 
 </style>
 </html>
