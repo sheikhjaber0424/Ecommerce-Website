@@ -12,14 +12,17 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
     @include('header')
     @yield('content')
     
     @include('footer')
 </body>
+
 
 <style>
    *{
@@ -45,12 +48,32 @@
         user-select: none;
       }
 
-      .custom-slider{
+      .custom-product{
     height: 600px;
     margin-top: 20px;
+    
  }     
 
-0
+.trending-image{
+  height: 100px;
+}
+
+.trending-item{
+  float: left;
+  width:20%;
+}
+
+.trending{
+  margin-top: 100px;
+}
+
+.con{
+  margin-top:20px; 
+}
  
+
+.main-detail{
+  height: 530px;
+} 
 </style>
 </html>

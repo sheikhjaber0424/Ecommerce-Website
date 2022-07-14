@@ -5,7 +5,7 @@
     
 
 <!-- Remove the container if you want to extend the Footer to full width. -->
-<div class=" con">
+<div class="con" style="clear: both">
 
     <footer class="text-white text-center text-lg-start bg-dark ft">
       <!-- Grid container -->
