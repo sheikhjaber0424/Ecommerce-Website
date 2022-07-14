@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-sm-6">
                         <div class="images p-3">
                             
                             <div class="thumbnail text-center"> <img onclick="change_image(this)" src="{{ $product['gallery'] }}" width="80%"> </div>
