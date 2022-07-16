@@ -19,7 +19,6 @@
 <body>
     @include('header')
     @yield('content')
-    
     @include('footer')
 </body>
 
@@ -75,5 +74,10 @@
 .main-detail{
   height: 530px;
 } 
+
+
+.nn{
+ margin-right : 60px;
+}
 </style>
 </html>
