@@ -47,7 +47,7 @@ if(Session::has('user'))
          @endif
 
 
-         <li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li>
+         <a style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
 
         
 
