@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 
@@ -26,4 +27,7 @@ Route::get('/detail/{id}',[ProductController::class,'detail']);
 Route::get('/search',[ProductController::class,'search']);
 Route::post('/addToCart',[ProductController::class,'addToCart']);
 
-
+Route::get('/logout', function () {
+    Session::forget('user');
+    return view('login');
+});

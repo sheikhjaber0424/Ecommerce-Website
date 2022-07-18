@@ -1,6 +1,12 @@
 <?php 
 use App\Http\Controllers\ProductController;
-$total = ProductController::cartItem();
+
+$cart_count = 0;
+if(Session::has('user'))
+{
+  $cart_count = ProductController::cartItem();
+}
+
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,20 +23,7 @@ $total = ProductController::cartItem();
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
+          
         </ul>
         <form action="/search" class="d-flex">
           <input style="width:350px" class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search">
@@ -38,8 +31,31 @@ $total = ProductController::cartItem();
         </form>
         
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nn">
-         <li><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $total }})</li>
+          @if (Session::has('user'))    
+          <li class="nav-item dropdown" >
+           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             {{ Session::get('user')['name']}}
+           </a>
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+             <li><a class="dropdown-item" href="/logout">Logout</a></li>
+             
+           </ul>
+         </li>
+           @else
+           
+           <li style="margin-right: 3px"><a  href="/login"><button type="button" class="btn btn-dark">Login</button></a></li>
+         @endif
+
+
+         <li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li>
+
+        
+
+
         </ul>
+
+        
+        
         
       </div>
     </div>
