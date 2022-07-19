@@ -32,5 +32,13 @@ Route::get('/logout', function () {
     return view('login');
 });
 
+// To show the Cart
 Route::get('/shoppingCart',[ProductController::class,'shoppingCart']);
+
+// RemoveItem from cart
+Route::get('/removeItem/{id}',[ProductController::class,'removeItem']);
+
+//Oder Route
+ Route::post('/shoppingCart',[ProductController::class,'orderNow']);
+
 

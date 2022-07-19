@@ -18,7 +18,7 @@ if(Session::has('user'))
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -47,7 +47,7 @@ if(Session::has('user'))
          @endif
 
 
-         <a style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
+         <a class="" data-mdb-toggle="tooltip" title="Check Cart" style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
 
         
 
