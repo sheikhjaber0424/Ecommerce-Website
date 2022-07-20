@@ -31,7 +31,8 @@ if(Session::has('user'))
         </form>
         
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nn">
-          @if (Session::has('user'))    
+          @if (Session::has('user'))  
+          
           <li class="nav-item dropdown" >
            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              {{ Session::get('user')['name']}}
@@ -41,13 +42,15 @@ if(Session::has('user'))
              
            </ul>
          </li>
+         <a class="" data-mdb-toggle="tooltip" title="Check Cart" style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
            @else
            
            <li style="margin-right: 3px"><a  href="/login"><button type="button" class="btn btn-dark">Login</button></a></li>
+           <li style="margin-right: 3px"><a  href="/register"><button type="button" class="btn btn-dark">Register</button></a></li>
          @endif
 
 
-         <a class="" data-mdb-toggle="tooltip" title="Check Cart" style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
+        
 
         
 

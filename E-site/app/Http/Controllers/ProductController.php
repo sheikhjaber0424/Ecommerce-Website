@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
  
 class ProductController extends Controller
@@ -95,5 +97,15 @@ class ProductController extends Controller
     // $request->input();
 
     return redirect('/');
+    }
+
+    function register(Request $request){
+        $customer = new User;
+        $customer->name = $request->name;
+        $customer->email = $request->email;
+        $customer->password = Hash::make($request->password);
+        $customer->save();
+        return redirect('/login');
+        
     }
 }

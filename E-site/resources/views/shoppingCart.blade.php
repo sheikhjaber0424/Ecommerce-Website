@@ -46,10 +46,7 @@ $grand_total = $total_price + $shipping;
                   <i class="fas fa-trash"></i>
                 </button>   
                 </a>
-                <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
-                  title="Move to the wish list">
-                  <i class="fas fa-heart"></i>
-                </button>
+               
                 <!-- Data -->
               </div>
 
@@ -106,7 +103,7 @@ $grand_total = $total_price + $shipping;
                     <p class="mb-0">(including VAT)</p>
                   </strong>
                 </div>
-                <span><strong>{{ $grand_total }} Tk</strong></span>
+                <span data-name="total"><strong>{{ $grand_total }} Tk</strong></span>
               </li>
             </ul>
             <form action="/shoppingCart" method="POST">

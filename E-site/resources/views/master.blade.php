@@ -24,11 +24,16 @@
 
 
 <style>
+
+
+
    *{
   margin: 0;
   padding: 0;
  }
-
+body{
+  font-family: Arial;
+}
  .custom-login{
   height: 620px;
   padding-top: 100px  
@@ -73,11 +78,17 @@
 
 .main-detail{
   height: 530px;
+ 
 } 
 
 
-.nn{
+.navbar .nn{
  margin-right : 60px;
+
+}
+
+.carousel-inner{
+ 
 }
 
 

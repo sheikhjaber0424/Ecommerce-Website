@@ -42,3 +42,10 @@ Route::get('/removeItem/{id}',[ProductController::class,'removeItem']);
  Route::post('/shoppingCart',[ProductController::class,'orderNow']);
 
 
+//Registration System
+Route::get('/register', function () {
+    
+    return view('registration');
+});
+
+Route::post('/register',[ProductController::class,'register']);
