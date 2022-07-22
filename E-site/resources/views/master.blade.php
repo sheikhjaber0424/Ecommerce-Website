@@ -26,7 +26,7 @@
 <style>
 
 
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
    *{
   margin: 0;
   padding: 0;
@@ -34,6 +34,9 @@
 body{
   font-family: Arial;
  
+}
+body h1,h3{
+  font-family: 'Koulen', cursive;
 }
  .custom-login{
   height: 620px;
