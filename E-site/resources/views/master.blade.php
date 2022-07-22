@@ -26,19 +26,25 @@
 <style>
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600&display=swap');
    *{
   margin: 0;
   padding: 0;
  }
 body{
   font-family: Arial;
+ 
 }
  .custom-login{
   height: 620px;
   padding-top: 100px  
  }
 
+ .navbar-brand{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  color: green;
+  font-size: 25px;
+ }
  .slider-img{
     height: 400px !important;
  }
@@ -60,11 +66,14 @@ body{
 
 .trending-image{
   height: 100px;
+  
+  
 }
 
 .trending-item{
   float: left;
   width:20%;
+  margin: 30px 0px;
 }
 
 .trending{
@@ -73,6 +82,7 @@ body{
 
 .con{
   margin-top:20px; 
+  
 }
  
 

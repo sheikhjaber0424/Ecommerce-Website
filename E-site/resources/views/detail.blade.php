@@ -29,15 +29,14 @@
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product['id'] }}">
                                 <div class="cart mt-4 align-items-center"> 
-                                    <button style="margin-top: 50px" class="btn btn-primary text-uppercase mr-2 px-4">Add to cart</button> 
+                                    <button type="submit" style="margin-top: 50px" class="btn btn-primary text-uppercase mr-2 px-4">Add to cart</button> 
                                 </div>    
                                
                             </form>
-                            <div class="cart mt-4 align-items-center"> 
-                                
 
-                                <button  style="width: 150px" class="btn btn-success   text-uppercase mr-2 px-4">Buy Now</button>
-                            </div>
+                          
+                          
+                           
                             <div class="cart mt-4 align-items-center"> 
                                 &nbsp; <i class="fa fa-heart text-muted"></i>  &nbsp; &nbsp; <i class="fa fa-share-alt text-muted"></i> 
                             </div>

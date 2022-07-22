@@ -43,7 +43,35 @@ class ProductSeeder extends Seeder
                 'description' =>'Newly released Sony smartphone',
                 'category' => 'mobile',
                 'gallery'=> 'https://sc04.alicdn.com/kf/H358abbb81ea54f23b71deb0d6368089eP.jpg'
-            ]
+            ],
+            [
+                'name' => 'Sony Mobile',
+                'price' => '25000 Tk',
+                'description' =>'Newly released Sony smartphone',
+                'category' => 'mobile',
+                'gallery'=> 'https://sc04.alicdn.com/kf/H358abbb81ea54f23b71deb0d6368089eP.jpg'
+            ],
+            [
+                'name' => 'Sony Mobile',
+                'price' => '25000 Tk',
+                'description' =>'Newly released Sony smartphone',
+                'category' => 'mobile',
+                'gallery'=> 'https://sc04.alicdn.com/kf/H358abbb81ea54f23b71deb0d6368089eP.jpg'
+            ],
+            [
+                'name' => 'Sony Mobile',
+                'price' => '25000 Tk',
+                'description' =>'Newly released Sony smartphone',
+                'category' => 'mobile',
+                'gallery'=> 'https://sc04.alicdn.com/kf/H358abbb81ea54f23b71deb0d6368089eP.jpg'
+            ],
+            [
+                'name' => 'Sony Mobile',
+                'price' => '25000 Tk',
+                'description' =>'Newly released Sony smartphone',
+                'category' => 'mobile',
+                'gallery'=> 'https://sc04.alicdn.com/kf/H358abbb81ea54f23b71deb0d6368089eP.jpg'
+            ],
         ]);
     }
 }
