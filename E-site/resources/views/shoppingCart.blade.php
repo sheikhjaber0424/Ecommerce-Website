@@ -9,8 +9,8 @@ $grand_total = $total_price + $shipping;
 @section('content')
 
 
-<section class="h-100 gradient-custom">
-  <div class="container py-5">
+<section class="h-100 gradient-custom" style="min-height: 850px !important">
+  <div class="container py-5" >
     <div class="row d-flex justify-content-center my-4">
       <div class="col-md-8">
         <div class="card mb-4">
@@ -23,10 +23,10 @@ $grand_total = $total_price + $shipping;
             @foreach ($cartItems as $item)
                 
             
-            <div class="row">
+            <div class="row" >
               <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                 <!-- Image -->
-                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
+                <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light" >
                   <img src="{{ $item->gallery }}"
                     class="w-100" alt="Blue Jeans Jacket" />
                   <a href="#!">

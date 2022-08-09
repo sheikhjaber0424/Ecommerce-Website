@@ -49,3 +49,8 @@ Route::get('/register', function () {
 });
 
 Route::post('/register',[ProductController::class,'register']);
+Route::get('/userOrders',[ProductController::class,'userOrders']);
+
+Route::get('/categories',[ProductController::class,'categories']);
+
+

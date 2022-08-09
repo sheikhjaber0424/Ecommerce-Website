@@ -16,7 +16,7 @@
           <div class="row mt-2">
             <!--Grid column-->
             <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-4">About company</h5>
+              <h3 class="text-uppercase mb-4">About company</h3>
     
               <p>
                 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
@@ -36,7 +36,7 @@
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
              
               <div class="ml-5 mb-4">
-               <h3>Address</h3>
+               <h3 >Address</h3>
               </div>
     
               <ul class="fa-ul" style="margin-left: 1.65em;">
@@ -55,7 +55,7 @@
     
             <!--Grid column-->
             <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h5 class="text-uppercase mb-4">Opening hours</h5>
+              <h3 class="text-uppercase mb-4">Opening hours</h3>
     
               <table class="table text-center text-white">
                 <tbody class="fw-normal">

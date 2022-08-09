@@ -7,8 +7,7 @@
             <div class="card">
                 <div class="row">
                     <div class="col-sm-6">
-                        <div class="images p-3">
-                            
+                        <div class="images p-3">                           
                             <div class="thumbnail text-center"> <img onclick="change_image(this)" src="{{ $product['gallery'] }}" width="80%"> </div>
                         </div>
                     </div>
@@ -19,13 +18,13 @@
                             </div>
                             <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand"><h2>{{  $product['name']}}</h2></span>
                                
-                                <div class="price d-flex flex-row align-items-center"> <span class="act-price"><h3>{{ $product['price'] }}</h3></span>
+                                <div class="price d-flex flex-row align-items-center"> <span class="act-price" ><h3 style="font-family: Arial, Helvetica, sans-serif">{{ $product['price'] }}</h3></span>
                                     
                                 </div>
                             </div>
                             <p class="about">{{ $product['description'] }}</p>
 
-                            <form action="/addToCart" method="POST" >
+                            <form action="/addToCart" method="POST">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product['id'] }}">
                                 <div class="cart mt-4 align-items-center"> 
@@ -33,10 +32,7 @@
                                 </div>    
                                
                             </form>
-
-                          
-                          
-                           
+              
                             <div class="cart mt-4 align-items-center"> 
                                 &nbsp; <i class="fa fa-heart text-muted"></i>  &nbsp; &nbsp; <i class="fa fa-share-alt text-muted"></i> 
                             </div>

@@ -40,7 +40,7 @@
 
   <div class="container">
     <div class="products text-center" style="padding: 20px;margin:30px 0px;"> 
-      <h3 class="mb-5 text-center" style="font-size:40px" >Our Products</h3>   
+      <h3 class="mb-5 text-center" style="font-size:40px" >All Products</h3>   
 
       @foreach ($products as $item) 
      

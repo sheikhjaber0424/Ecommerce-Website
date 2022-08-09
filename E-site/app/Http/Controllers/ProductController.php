@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
  
+
 class ProductController extends Controller
 {
     function index()
@@ -29,7 +30,7 @@ class ProductController extends Controller
     {
         
        $data = Product::where('name', 'like','%'.$request->input('query').'%')->get();
-      return view('search',['products'=>$data]);
+       return view('search',['products'=>$data]);
     }
 
     function addToCart(Request $request)
@@ -46,6 +47,7 @@ class ProductController extends Controller
             return redirect('/login');
         }
     }
+
 
    public static function cartItem()
     {
@@ -108,4 +110,24 @@ class ProductController extends Controller
         return redirect('/login');
         
     }
+
+    public function userOrders()
+    {
+        $userId = Session::get('user')['id'];
+        $orders = DB::table('orders')
+       ->join('products','orders.product_id','=','products.id')
+       ->where('orders.user_id',$userId)
+       ->get();
+       
+       return view('userOrders',['orders'=>$orders]);
+    }
+
+    function categories(Request $request)
+    {  
+      
+       $data = Product::where('category', 'like','%'.$request->input('query').'%')->get();
+       return view('categories',['products'=>$data]);
+    }
+   
+    
 }
