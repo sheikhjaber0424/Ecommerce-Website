@@ -120,7 +120,7 @@ if(Session::has('user'))
            
            <li style="margin-right: 3px"><a  href="/login"><button type="button" class="btn btn-dark">Login</button></a></li>
            <li style="margin-right: 3px"><a  href="/register"><button type="button" class="btn btn-dark">Register</button></a></li>
-         @endif
+          @endif
 
 
         

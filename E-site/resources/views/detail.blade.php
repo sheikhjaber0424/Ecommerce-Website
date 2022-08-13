@@ -1,7 +1,8 @@
 @extends('master') 
 @section('content')
 
-<div class="container mt-5 mb-5 main-detail">
+<section >
+<div class="container mt-5 mb-5 " style="margin-bottom:50px ">
     <div class="row d-flex justify-content-center">
         <div class="col-md-10">
             <div class="card">
@@ -43,5 +44,6 @@
         </div>
     </div>
 </div>
+</section>
 
 @endsection

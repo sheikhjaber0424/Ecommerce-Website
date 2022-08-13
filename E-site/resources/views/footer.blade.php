@@ -5,8 +5,8 @@
 
 
 
-
-
+<section class="bg-dark">
+<div class="container-fluid">
   <div class="bg-dark text-secondary px-4 py-5 text-center" style="clear: both">
     <div class="py-5">
       <footer class="text-white text-center text-lg-start bg-dark ft">
@@ -86,3 +86,5 @@
       </footer>
     </div>
   </div>
+</div>
+</section>
