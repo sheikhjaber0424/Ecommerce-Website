@@ -71,7 +71,7 @@ class ProductController extends Controller
 
        return view('shoppingCart',['cartItems'=>$cartItems,'total_price'=>$total_price]);
     }
-
+    
     function removeItem($id){
 
         Cart::destroy($id);
@@ -119,15 +119,15 @@ class ProductController extends Controller
        ->where('orders.user_id',$userId)
        ->get();
        
+    //    dd($orders);
        return view('userOrders',['orders'=>$orders]);
     }
 
     function categories(Request $request)
-    {  
-      
+    {      
        $data = Product::where('category', 'like','%'.$request->input('query').'%')->get();
        return view('categories',['products'=>$data]);
     }
-   
+    
     
 }

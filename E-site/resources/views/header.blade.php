@@ -27,8 +27,8 @@ if(Session::has('user'))
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
                 <form action="/categories" class="d-flex">
-                  <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="mobile" placeholder="Search" aria-label="Search">
-                  <button class="dropdown-item" type="submit">Mobile</button>
+                  <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="mouse" placeholder="Search" aria-label="Search">
+                  <button class="dropdown-item" type="submit">Mouse</button>
                 </form>
   
               </li>
@@ -38,15 +38,52 @@ if(Session::has('user'))
               <li><hr class="dropdown-divider"></li>
               <li>
                   <form action="/categories" class="d-flex">
-                  <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="tv" placeholder="Search" aria-label="Search">
-                  <button class="dropdown-item" type="submit">Tv</button>
+                  <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="Keyboard" placeholder="Search" aria-label="Search">
+                  <button class="dropdown-item" type="submit">Keyboard</button>
                   </form>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li><form action="/categories" class="d-flex">
-                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="fridge" placeholder="Search" aria-label="Search">
-                <button class="dropdown-item" type="submit">Fridge</button>
-                </form></li>
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="headphone" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Headphone</button>
+                </form>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+              <li><form action="/categories" class="d-flex">
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="Laptop" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Laptop</button>
+                </form>
+              </li>
+
+
+              <li><hr class="dropdown-divider"></li>
+              <li><form action="/categories" class="d-flex">
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="monitor" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Monitor</button>
+                </form>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+              <li><form action="/categories" class="d-flex">
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="gamepad" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Gamepad</button>
+                </form>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li><form action="/categories" class="d-flex">
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="console" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Console</button>
+                </form>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+              <li><form action="/categories" class="d-flex">
+                <input style="width:350px" class="form-control ms-2 d-none" type="text" name="query" value="card" placeholder="Search" aria-label="Search">
+                <button class="dropdown-item" type="submit">Graphics Card</button>
+                </form>
+              </li>
+
             </ul>
           </li>
 
@@ -56,7 +93,7 @@ if(Session::has('user'))
           
         </ul>
         <form action="/search" class="d-flex">
-          <input style="width:350px" class="form-control ms-2" type="text" name="query"  placeholder="Search" aria-label="Search">
+          <input style="width:350px" class="form-control ms-2 me-1" type="text" name="query"  placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         

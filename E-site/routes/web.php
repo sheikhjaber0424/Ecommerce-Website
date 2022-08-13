@@ -22,11 +22,19 @@ Route::get('/login', function () {
 
 Route::post('/login',[UserController::class,'login']);
 
+//Home
 Route::get('/',[ProductController::class,'index']);
+
+//Show single item detail
 Route::get('/detail/{id}',[ProductController::class,'detail']);
+
+//Search products
 Route::get('/search',[ProductController::class,'search']);
+
+//Adding product in cart
 Route::post('/addToCart',[ProductController::class,'addToCart']);
 
+//Logout 
 Route::get('/logout', function () {
     Session::forget('user');
     return view('login');
@@ -43,14 +51,16 @@ Route::get('/removeItem/{id}',[ProductController::class,'removeItem']);
 
 
 //Registration System
-Route::get('/register', function () {
-    
+Route::get('/register', function () {  
     return view('registration');
 });
 
 Route::post('/register',[ProductController::class,'register']);
+
+//Show User Orders
 Route::get('/userOrders',[ProductController::class,'userOrders']);
 
+//Search by Categories
 Route::get('/categories',[ProductController::class,'categories']);
 
 

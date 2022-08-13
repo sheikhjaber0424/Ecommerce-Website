@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="images p-3">                           
-                            <div class="thumbnail text-center"> <img onclick="change_image(this)" src="{{ $product['gallery'] }}" width="80%"> </div>
+                            <div class="thumbnail text-center"> <img  src="{{ $product['gallery'] }}" width="80%"> </div>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -28,7 +28,7 @@
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product['id'] }}">
                                 <div class="cart mt-4 align-items-center"> 
-                                    <button type="submit" style="margin-top: 50px" class="btn btn-primary text-uppercase mr-2 px-4">Add to cart</button> 
+                                    <button type="submit" style="margin-top: 50px" class="btn btn-primary text-uppercase px-4">Add to cart</button> 
                                 </div>    
                                
                             </form>

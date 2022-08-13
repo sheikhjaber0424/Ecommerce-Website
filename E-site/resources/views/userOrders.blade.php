@@ -12,7 +12,7 @@
             <h5 class="mb-0 text-center">Orders List</h5>
           </div>
           <div class="card-body">
-            <!-- Single item -->
+           
             
             @foreach ($orders as $item)
                 
@@ -34,32 +34,20 @@
                 <!-- Data -->
                 <p><strong>{{ $item->name }}</strong></p>
                 <p>{{ $item->description }}</p>
-                <p>Price : {{ $item->price }}</p>
-                <p>Payment Status : {{ $item->status}}</p>
+                <p class="fw-bold">Price : {{ $item->price }}</p>
+                {{-- <p>Payment Status : {{ $item->status}}</p> --}}
               
                 <!-- Data -->
               </div>
 
               <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-                <!-- Quantity -->
-              
-                <!-- Quantity -->
-
-                <!-- Price -->
                 
-                <!-- Price -->
               </div>
             </div>
             <hr class="my-4"/>
             
             @endforeach
-            <!-- Single item -->
-
-           
-
-            <!-- Single item -->
-           
-            <!-- Single item -->
+            
           </div>
           
           

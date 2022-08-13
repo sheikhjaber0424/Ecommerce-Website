@@ -7,11 +7,11 @@
     @foreach ($products as $item) 
    
       
-    <div class="card " style="width: 13rem;display:inline-block;margin-left:20px;margin-top:30px;padding:10px">
-      <a href="/detail/{{ $item['id'] }}" ><img class="card-img-top" src="{{ $item['gallery'] }}" alt="Card image cap" height="150"></a>
+    <div class="card " style="width: 15rem;display:inline-block;margin-left:20px;margin-top:30px;padding:10px">
+      <a href="/detail/{{ $item['id'] }}" ><img class="card-img-top " src="{{ $item['gallery'] }}" alt="Card image cap" width="200"  height="250"></a>
       <div class="card-body">
-          <a href="/detail/{{ $item['id'] }}" style="color: black; text-decoration:none"><h5>{{ $item['name'] }}</h5></a>
-        <p class="card-text">{{ $item['price'] }}</p>
+          <a href="/detail/{{ $item['id'] }}" style="color: black; text-decoration:none"><h6>{{ $item['name'] }}</h6></a>
+        <p class="card-text fw-bold">{{ $item['price'] }}</p>
        
       </div>
     </div>
