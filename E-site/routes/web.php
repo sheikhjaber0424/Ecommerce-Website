@@ -34,6 +34,18 @@ Route::get('/search',[ProductController::class,'search']);
 //Adding product in cart
 Route::post('/addToCart',[ProductController::class,'addToCart']);
 
+//Adding product in wishlist
+Route::get('/addwishList/{id}',[ProductController::class,'addwishList']);
+
+
+//Show Wishlist
+Route::get('/showWishlist',[ProductController::class,'showWishlist']);
+
+
+//Remove WishItem
+Route::get('/wishRemove/{id}',[ProductController::class,'wishRemove']);
+
+
 //Logout 
 Route::get('/logout', function () {
     Session::forget('user');
@@ -57,8 +69,10 @@ Route::get('/register', function () {
 
 Route::post('/register',[ProductController::class,'register']);
 
+
 //Show User Orders
 Route::get('/userOrders',[ProductController::class,'userOrders']);
+
 
 //Search by Categories
 Route::get('/categories',[ProductController::class,'categories']);

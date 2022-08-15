@@ -28,12 +28,15 @@
                             <form action="/addToCart" method="POST">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product['id'] }}">
-                                <div class="cart mt-4 align-items-center"> 
-                                    <button type="submit" style="margin-top: 50px" class="btn btn-primary text-uppercase px-4">Add to cart</button> 
+                                <div class="cart mt-4 text-start"> 
+                                    <button type="submit" style="margin-top: 50px;width:203px" class="btn btn-success text-uppercase px-4"><i class="fa fa-shopping-cart text-muted"></i> Add to cart</button>     
                                 </div>    
-                               
+                                                               
                             </form>
-              
+
+                                <a href="/addwishList/{{ $product['id'] }}">
+                                    <button type="submit" style="margin-top: 10px" class="btn btn-primary  text-uppercase px-4"><i class="fa fa-heart text-muted"></i> Add to Wishlist</button> 
+                                </a>
                             <div class="cart mt-4 align-items-center"> 
                                 &nbsp; <i class="fa fa-heart text-muted"></i>  &nbsp; &nbsp; <i class="fa fa-share-alt text-muted"></i> 
                             </div>

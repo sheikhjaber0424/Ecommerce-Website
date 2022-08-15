@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\User;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Wishlist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -49,6 +50,42 @@ class ProductController extends Controller
     }
 
 
+    function addwishList(Request $request,$id)
+    {
+        if($request->session()->has('user'))
+        {
+            $wish = new Wishlist;
+            $wish->user_id=$request->session()->get('user')['id'];
+            $wish->product_id=$id;
+            $wish->save();
+            return redirect('/');
+        }
+        
+        else
+        {
+            return redirect('/login');
+        }
+    }
+
+    function showWishlist(){
+        // $data = DB::table('wishlist')->get();
+     
+
+        $userId = Session::get('user')['id'];
+        $data = DB::table('wishlist')
+       ->join('products','wishlist.product_id','=','products.id')
+       ->where('wishlist.user_id',$userId)
+       ->select('products.*','wishlist.id as wishlist_id')
+       ->get();
+
+        //    dd($data);
+
+       return view('wishlist',['wishProducts'=>$data]);
+    }
+    
+    
+
+
    public static function cartItem()
     {
         $user_id = Session::get('user')['id'];
@@ -79,6 +116,14 @@ class ProductController extends Controller
         return redirect('/shoppingCart');
     }
 
+    function wishRemove($id){
+
+        Wishlist::destroy($id);
+
+        return redirect('/usersWishlist');
+    }
+
+    
    function orderNow(Request $request){
     $userId = Session::get('user')['id'];
     $allCartItems = Cart::where('user_id',$userId)->get();
@@ -107,8 +152,7 @@ class ProductController extends Controller
         $customer->email = $request->email;
         $customer->password = Hash::make($request->password);
         $customer->save();
-        return redirect('/login');
-        
+        return redirect('/login');       
     }
 
     public function userOrders()

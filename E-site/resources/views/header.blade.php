@@ -112,6 +112,9 @@ if(Session::has('user'))
          <li class="nav-item mx-2">
           <a class="nav-link active" aria-current="page" href="/userOrders">Orders</a>           
        </li>
+       <li class="nav-item me-2">
+        <a class="nav-link active" aria-current="page" href="/showWishlist">Wishlist</a>           
+     </li>
        
          
          
