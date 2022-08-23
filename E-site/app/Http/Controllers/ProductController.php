@@ -120,7 +120,7 @@ class ProductController extends Controller
 
         Wishlist::destroy($id);
 
-        return redirect('/usersWishlist');
+        return redirect('/showWishlist');
     }
 
     
@@ -152,6 +152,7 @@ class ProductController extends Controller
         $customer->email = $request->email;
         $customer->password = Hash::make($request->password);
         $customer->save();
+        
         return redirect('/login');       
     }
 

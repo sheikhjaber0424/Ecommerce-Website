@@ -27,7 +27,7 @@ $grand_total = $total_price + $shipping;
               <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                 <!-- Image -->
                 <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light" >
-                  <img src="{{ $item->gallery }}"
+                  <img src="{{ asset('storage/'.$item->gallery) }}"
                     class="w-100" alt="Blue Jeans Jacket" />
                   <a href="#!">
                     <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
@@ -110,7 +110,7 @@ $grand_total = $total_price + $shipping;
               @csrf
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Address</label>
-                <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea name="address" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                
               </div> 
 

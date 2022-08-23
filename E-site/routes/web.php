@@ -1,5 +1,6 @@
 <?php
 
+use TCG\Voyager\Voyager;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\UserController;
@@ -78,3 +79,8 @@ Route::get('/userOrders',[ProductController::class,'userOrders']);
 Route::get('/categories',[ProductController::class,'categories']);
 
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

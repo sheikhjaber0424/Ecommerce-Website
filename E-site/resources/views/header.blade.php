@@ -93,14 +93,14 @@ if(Session::has('user'))
           
         </ul>
         <form action="/search" class="d-flex">
-          <input style="width:350px" class="form-control ms-2 me-1" type="text" name="query"  placeholder="Search" aria-label="Search">
+          <input style="width:350px" class="form-control ms-2 me-2" type="text" name="query"  placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nn">
           @if (Session::has('user'))  
           
-          <li class="nav-item dropdown" >
+          <li class="nav-item dropdown me-2" >
            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
              {{ Session::get('user')['name']}}
            </a>
@@ -109,11 +109,11 @@ if(Session::has('user'))
              
            </ul>
          </li>
-         <li class="nav-item mx-2">
+         <li class="nav-item me-3">
           <a class="nav-link active" aria-current="page" href="/userOrders">Orders</a>           
        </li>
-       <li class="nav-item me-2">
-        <a class="nav-link active" aria-current="page" href="/showWishlist">Wishlist</a>           
+       <li class="nav-item me-3">
+        <a class="nav-link active" aria-current="page" href="/showWishlist"><i class="fa fa-heart text-muted"></i> Wishlist</a>           
      </li>
        
          

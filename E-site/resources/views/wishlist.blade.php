@@ -23,7 +23,7 @@
                 <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light" >
 
                   <a href="/detail/{{ $item->id }}">
-                    <img src="{{ $item->gallery }}" class="w-100" alt="Blue Jeans Jacket" />
+                    <img src="{{ asset('storage/'.$item->gallery) }}" class="w-100" alt="Blue Jeans Jacket" />
                   </a>
                  
                 </div>
