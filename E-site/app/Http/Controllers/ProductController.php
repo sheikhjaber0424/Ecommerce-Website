@@ -21,6 +21,12 @@ class ProductController extends Controller
         return view('product',['products'=>$data]);
     }
 
+    function allproducts()
+    {
+        $data = Product::paginate(12)->fragment('products');
+        return view('allproducts',['products'=>$data]);
+    }
+
     function detail($id)
     {
         $data = Product::find($id);

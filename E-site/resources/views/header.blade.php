@@ -87,6 +87,11 @@ if(Session::has('user'))
             </ul>
           </li>
 
+
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/allproducts">All Products</a>           
+         </li>
           
          
          
@@ -118,18 +123,12 @@ if(Session::has('user'))
        
          
          
-         <a class="" data-mdb-toggle="tooltip" title="Check Cart" style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  cart({{ $cart_count }})</li></a>
+         <a class="" data-mdb-toggle="tooltip" title="Check Cart" style="text-decoration: none; color:black" href="/shoppingCart"><li class ="nav-item mt-2"><i class="fa fa-shopping-cart text-muted"></i>  Cart({{ $cart_count }})</li></a>
            @else
            
            <li style="margin-right: 3px"><a  href="/login"><button type="button" class="btn btn-dark">Login</button></a></li>
            <li style="margin-right: 3px"><a  href="/register"><button type="button" class="btn btn-dark">Register</button></a></li>
           @endif
-
-
-        
-
-        
-
 
         </ul>
 

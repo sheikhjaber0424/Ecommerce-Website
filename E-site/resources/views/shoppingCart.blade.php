@@ -15,7 +15,7 @@ $grand_total = $total_price + $shipping;
       <div class="col-md-8">
         <div class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0 text-center">Cart items</h5>
+            <h3 class="mb-0 text-center">Cart items</h3>
           </div>
           <div class="card-body">
             <!-- Single item -->
@@ -82,7 +82,7 @@ $grand_total = $total_price + $shipping;
       <div class="col-md-4">
         <div class="card mb-4">
           <div class="card-header py-3">
-            <h5 class="mb-0 text-center">Summary</h5>
+            <h3 class="mb-0 text-center">Summary</h3>
           </div>
           <div class="card-body">
             <ul class="list-group list-group-flush">
@@ -114,9 +114,15 @@ $grand_total = $total_price + $shipping;
                
               </div> 
 
+
+              @if (count($cartItems)!=0)
               <button type="submit" class="btn btn-success btn-lg btn-block">
                 ORDER NOW
               </button>
+
+              @endif
+
+
 
             </form>
            

@@ -29,6 +29,9 @@ Route::get('/',[ProductController::class,'index']);
 //Show single item detail
 Route::get('/detail/{id}',[ProductController::class,'detail']);
 
+//All Products
+Route::get('/allproducts',[ProductController::class,'allproducts']);
+
 //Search products
 Route::get('/search',[ProductController::class,'search']);
 
